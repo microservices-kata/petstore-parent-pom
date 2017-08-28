@@ -5,7 +5,7 @@ pipeline {
     agent {
         docker {
             reuseNode true
-            image "maven:3.5.0-jdk-8-alpine"
+            image "${mvnImage}"
             args "-v ${mvnFolder}:/root/.m2"
         }
     }
